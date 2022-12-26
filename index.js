@@ -144,7 +144,6 @@ submitBtn.addEventListener("click", () => {
   if (answer) {
     if (answer === quizData[currentQuiz].correct) {
       display.innerHTML = ` <h2>Correct, Now Choose one of this!!!</h2>`;
-
       currentQuiz++;
       score++;
     } else {
