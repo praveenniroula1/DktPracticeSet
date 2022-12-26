@@ -92,8 +92,8 @@ const quizData = [
 ];
 
 const quiz = document.getElementById("quiz");
-const answerEls = document.querySelectorAll(".answer");
-const questionEl = document.getElementById("question");
+const answerElement = document.querySelectorAll(".answer");
+const questionElement = document.getElementById("question");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
@@ -110,7 +110,7 @@ function loadQuiz() {
 
   const currentQuizData = quizData[currentQuiz];
 
-  questionEl.innerText = currentQuizData.question;
+  questionElement.innerText = currentQuizData.question;
   a_text.innerText = currentQuizData.a;
   b_text.innerText = currentQuizData.b;
   c_text.innerText = currentQuizData.c;
@@ -120,9 +120,9 @@ function loadQuiz() {
 function getSelected() {
   let answer = undefined;
 
-  answerEls.forEach((answerEl) => {
-    if (answerEl.checked) {
-      answer = answerEl.id;
+  answerElement.forEach((answerElement) => {
+    if (answerElement.checked) {
+      answer = answerElement.id;
     }
   });
 
@@ -130,8 +130,8 @@ function getSelected() {
 }
 
 function deselectAnswers() {
-  answerEls.forEach((answerEl) => {
-    answerEl.checked = false;
+  answerElement.forEach((answerElement) => {
+    answerElement.checked = false;
   });
 }
 
